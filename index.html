@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>San Mig Light Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,200;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+<style>    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    :root{
+        --primary-color:#f7f8f8;
+        --secondary-color:#2a347e;
+        --accent-color:#ebc23c;
+    }
+
+    a{
+        text-decoration: none;
+        letter-spacing: 2px;
+        color: #000000;
+    }
+
+    body{
+        font-family: 'Raleway', sans-serif;
+        height: 100vh;
+        background-color: var(--primary-color);
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .logo{
+        display: block;
+        width: 50px
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    li{
+        display: block;
+    }
+
+    .title{
+        font-size: 90px;
+        font-weight: 800px;
+        letter-spacing: 3px;
+        color: var(--accent-color);
+        padding: 20px 0;
+        font-style: italic;
+    }
+
+    .paragraph{
+        letter-spacing: 1px;
+        padding: 10px 0;
+        line-height: 30px;
+        text-align: left;
+        font-size: 20px;
+         transition: all .8s ease;
+    }
+
+    .primary-btn{
+        background-color: var(--secondary-color);
+        padding: 16px 30px;
+        color: #fff;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 800;
+        transition: all .8s ease;
+    }
+    .primary-btn:hover{
+        color: #fff;
+    }
+
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+     
+    .menu .logo{
+        width: 90px;
+    }
+
+
+  .menu-links{
+        display: flex;
+        align-items: center;
+    }
+  .menu-links li{
+       margin: 20px;
+
+    }
+  .menu-links li a{
+        display: inline-block;
+        border: 1px solid var(--primary-color);
+        transition: all .8s ease;
+    }
+  .menu-links li a:hover{
+       border-bottom: 2px solid var(--secondary-color);
+    }
+
+    
+    .burger-icon{
+        font-size: 2rem;
+        cursor: pointer;
+        display: none;
+        z-index: 100;
+    }
+
+
+
+    .main-content{
+        display: flex;
+        align-items: center;
+        padding-top: 10rem;
+    }
+    .main-content .brand-model-img{
+  display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    }
+    .main-content .brand-model-img .cans {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20rem;
+    }
+    
+   .img-fluid.brands.light {
+        width: 10rem !important;
+    }
+
+    .main-content .brand-model-img .cans img{
+        width: 100px;
+    }
+
+    .main-content .model-description{
+        margin-left: 20px;
+    }
+
+    .brands{
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px){
+        .title{
+        font-size: 60px;
+        }
+
+        .paragraph{
+        font-size: 16px;
+        }
+
+        .main-content{
+        padding-top: 20rem;
+    }
+
+    }
+
+
+
+    @media screen and (max-width: 640px){
+        .menu-links{
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #fff;
+            transform: translateX(-1000px);
+            transition: all .5s ease;
+            overflow: hidden;
+        }
+
+        .menu-links.active{
+            transform: translateX(0);
+        }
+
+        .burger-icon{
+        display: block;
+    }
+
+        .ion-android-close{
+            display: none;
+        }
+
+    
+        .main-content{
+        padding-top: 5rem;
+    }
+
+        .main-content .model-description{
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .main-content .brand-model-img {
+        width:100%;
+    }
+
+    .main-content .brand-model-img .cans {
+        width: 10rem;
+    }
+
+
+ 
+    }
+
+
+
+</style>
+</head>
+</head>
+<body>
+    <header>
+        <div class="container menu">
+         <a class="logo" href="#">
+             <img src="https://i.imgur.com/GZxC25i.png" class="img-fluid" alt="Logo">
+         </a>
+             <ul class="menu-links">
+                 <li><a href="#">Home</a></li>
+                 <li><a href="#">What's New</a></li>
+                 <li><a href="#">Product</a></li>
+                 <li><a href="#">Contact</a></li>
+             </ul>
+             <div class="burger-icon" onclick="toggleMenuLinks()">
+                <i class="icon icon ion-android-menu"></i>
+                <i class="icon icon ion-android-close"></i>
+             </div>
+        </div>
+     </header>
+
+     <main>
+         <section class="content">
+            <div class="container">
+               <div class="row main-content">
+                <div class="col-md-6 brand-model-img">
+                    <div class="cans">
+                        <img src="https://i.imgur.com/88ndC9d.png"  class="img-fluid brands" alt="San Mig Light">
+                        <img src="https://i.imgur.com/aS5Rppe.png" class="img-fluid brands" alt="">
+                        <img src="https://i.imgur.com/WKwVflX.png" class="img-fluid brands light"  alt="">
+                        <img src="https://i.imgur.com/mTmPtt2.png" class="img-fluid brands" alt="">
+                    </div>
+                    <div class="model">
+                        <img src="https://i.imgur.com/88ndC9d.png"  class="img-fluid active-model" style="width:50rem ;" alt="San Mig Light">
+                    </div>
+                </div>
+                <div class="col-md-6 model-description">
+                    <h1 class="title">Let's Chill?</h1>
+                    <p class="paragraph">
+                        San Mig Light is a light and reduced-calorie lager with an exceptionally smooth and crispy taste. It is less filling and light on the stomach. Perfect for fun, light drinking moments with friends.
+                    </p>
+                    <a href="#" class="btn primary-btn mb-4">Learn More</a>
+                </div>
+               </div>
+            </div>
+         </section>
+
+         <script>
+             const brands = document.querySelectorAll(".brands");
+             const model = document.querySelector(".active-model");
+             const menuLinks = document.querySelector(".menu-links");
+
+            function toggleMenuLinks(e)
+            {
+                const menu = document.querySelector('.ion-android-menu');
+                const close = document.querySelector('.ion-android-close');
+                menuLinks.classList.toggle('active')
+                
+                if(menuLinks.classList.contains('active')){
+                    menu.style.display ="none";
+                close.style.display ="block";
+                }else{
+                    menu.style.display ="block";
+                close.style.display ="none";
+                }
+            }
+
+
+             brands.forEach(function(brand){
+                 const brandImg = brand.getAttribute('src');
+                 brand.addEventListener("click", ()=>{
+                    model.src = brandImg;
+                 });
+             })
+
+         </script>
+     </main>
+</body>
+</html>
